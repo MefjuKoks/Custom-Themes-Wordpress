@@ -1,0 +1,1 @@
+alert("Strona otwarta");
