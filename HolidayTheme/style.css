@@ -27,3 +27,9 @@ header{
     align-items: center;
     justify-content: space-around;
 }
+section button{
+    background-color: red !important;
+    padding:10px !important;
+    outline:0;
+    border:none;
+}

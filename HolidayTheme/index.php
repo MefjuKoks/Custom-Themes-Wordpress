@@ -1,4 +1,5 @@
 <?php
+$strona_id = get_the_ID();
 get_header();
 ?>
 <main>
@@ -13,6 +14,14 @@ get_header();
     <?php else :?>
         echo '<p>Brak zawartości do wyświetlenia.</p>';
     <?php endif; ?>
+    <section>
+        <button> <?php 
+        echo get_theme_mod('tekst_lewy', 'Domyslny Lewy');
+        ?> </button>
+        <button> <?php 
+        echo get_theme_mod('tekst_prawy', 'Domyslny Prawy');
+        ?></button>
+    </section>
 </main>
 <?php
 get_footer();

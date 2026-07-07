@@ -15,7 +15,7 @@
             wp_nav_menu( array(
                 'theme_location' => 'glowne-menu',
                 'menu_class'     => 'menu-lista',
-                'fallback_cb'    => false,
+                'fallback_cb'    => 'wp_page_menu',
             ) );
             ?>
         </nav>
