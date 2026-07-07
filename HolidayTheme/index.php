@@ -13,7 +13,6 @@ get_header();
     <?php else :?>
         echo '<p>Brak zawartości do wyświetlenia.</p>';
     <?php endif; ?>
-    ?>
 </main>
 <?php
 get_footer();
