@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?> >
     <header>
-        <h1><?php bloginfo('name'); ?> </h1>
+        <a href="<?php echo home_url(); ?>"><h1><?php bloginfo('name'); ?> </h1></a>
         <h1><?php bloginfo('description'); ?> </h1>
         <nav>
             <?php
