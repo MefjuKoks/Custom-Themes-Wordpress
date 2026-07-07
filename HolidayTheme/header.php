@@ -11,12 +11,13 @@
         <h1><?php bloginfo('name'); ?> </h1>
         <h1><?php bloginfo('description'); ?> </h1>
         <nav>
-            <ul>
-                <li>link1</li>
-                <li>link2</li>
-                <li>link3</li>
-                <li>link4</li>
-                <li>link5</li>
-            </ul>
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'glowne-menu',
+                'menu_class'     => 'menu-lista',
+                'fallback_cb'    => false,
+            ) );
+            ?>
         </nav>
+
     </header>   
