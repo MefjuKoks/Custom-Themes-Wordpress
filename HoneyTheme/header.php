@@ -8,29 +8,34 @@
 </head>
 <body <?php body_class(); ?> >
     <header class="site-header">
-        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?> </a></h1>
-        <h5><?php bloginfo('description'); ?></h5>
-        <?php if(is_page(82)){ ?>
-            <p>Thank you for viewing our work!</p>
-        <?php } ?>
-        <nav class="site-nav">
-            <?php
-            $args = array(
-                'theme_location' => 'primary'
-            );
-            wp_nav_menu($args);
-            ?>
-        </nav>
-        <nav class="nav-second">
-            <?php
-            $args = array(
-                'child_of' => $post->ID,
-                'title_li' => ''
-            );
-            ?>
+        <div class="header-container">
+            <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?> </a></h1>
+            <h5><?php bloginfo('description'); ?></h5>
+            <?php if(is_page(82)){ ?>
+                <p>Thank you for viewing our work!</p>
+            <?php } ?>
+            <nav class="site-nav">
+                <?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                $args = array(
+                    'theme_location' => 'primary'
+                );
+                wp_nav_menu($args);
+                ?>
+            </nav>
+            <nav class="nav-second">
+                <?php
+                $args = array(
+                    'child_of' => $post->ID,
+                    'title_li' => ''
+                );
+                ?>
 
 
-            <?php  wp_list_pages($args);  ?>
-        </nav>
+                <?php  wp_list_pages($args);  ?>
+            </nav>
+        </div>
+        <div class="search-hd">
+            <?php  get_search_form();  ?>
+        </div>
     </header>
     

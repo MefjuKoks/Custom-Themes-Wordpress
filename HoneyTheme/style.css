@@ -12,6 +12,10 @@ body{
     text-align: center;
 }
 .site-header{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
     position: sticky;
     z-index:9999;
     top:0px;
@@ -47,8 +51,9 @@ body{
 .site-nav .menu-header-menu-container ul li{
     list-style: none;
 }
-.nav-second li{
+.header-container .nav-second li{
     padding:10px;
+    list-style: none;
 }
 a{
     text-decoration: none;
