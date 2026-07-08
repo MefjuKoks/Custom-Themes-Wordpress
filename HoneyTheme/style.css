@@ -22,19 +22,33 @@ body{
     background-color: #fcba2dc4;
     color:#fff;
 }
+.site-footer{
+    padding:1%;
+}
+.site-footer ul li{
+    list-style-type: none;
+}
 .site-header a{
     color:#fff;
 }
-nav .menu ul{
+.site-header h1, .site-header h5{
+    margin-left:1%;
+}
+.site-nav .menu-header-menu-container ul{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap:20px;
-    padding:15px;
+    padding-left:15px;
+    padding-top:15px;
+    padding-bottom:5px;
 }
-nav .menu ul li{
+.site-nav .menu-header-menu-container ul li{
     list-style: none;
+}
+.nav-second li{
+    padding:10px;
 }
 a{
     text-decoration: none;
@@ -43,23 +57,58 @@ a{
 p{
     color:#61651480;
 }
-.item{
+.item, .item-page{
     background-color: #6bfc2da6;
     border-bottom:2px solid #000;
-    padding:20%;
+    padding: 10%;
 }
-.item .item-box{
-    width: 100%;
-    background-color: #6e6e6e79;
-}
-.item h2{
+.item h2, .item-page h2{
     font-size:2rem;
+    color:#fff;
 }
-.item p{
+.item h4{
+    color:#fff;
+}
+.item p, .item-page p{
     font-size:1.3rem;
 }
 nav ul li.current_page_item a {
     text-shadow: 2px 2px 20px #ededed !important;
     color: #4cad22a6 !important;
     font-weight: 900;
+}
+.item-page{
+    display: flex;
+    flex-direction: column;
+}
+.item-page h2{
+    margin: auto;
+    padding:50px;
+}
+.item-page p{
+    text-align:right;
+    padding:50px;
+}
+.item-page .item-page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.item-page .item-page-content p{
+    text-align: center;
+    margin: auto;
+}
+.item-page .item-page-content ul li{
+    text-align: center;
+    list-style: none;
+    padding:10px;
+}
+@media screen and (width <= 768px){
+    .item-page{
+        display: flex;
+        flex-direction: column;
+    }
 }
