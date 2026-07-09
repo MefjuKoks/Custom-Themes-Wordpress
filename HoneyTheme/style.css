@@ -124,9 +124,15 @@ nav ul li.current_page_item a {
     justify-content: center;
 }
 .custom-logo-link img.custom-logo {
-    width: 200px !important;
-    height: 150px !important;
+    width: 100px !important;
+    height: 100px !important;
     max-width: 100% !important;
     opacity:0.9;
     object-fit: contain; 
+}
+.search-hd input{
+    padding:10px;
+    background-color: #cf9313c4;
+    outline:0;
+    border:none;
 }
