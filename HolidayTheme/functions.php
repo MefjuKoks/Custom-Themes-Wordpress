@@ -6,18 +6,10 @@ add_action('wp_enqueue_scripts', 'load_styles');
 function rejestracja_moich_menu() {
     register_nav_menus( array(
         'glowne-menu' => __( 'Główne Menu Tematu', 'tekst-domeny' ),
+        'footer-menu' => __('Footer Menu')
     ) );
 }
 add_action( 'init', 'rejestracja_moich_menu' );
-if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page(array(
-        'page_title'    => 'Ustawienia motywu',
-        'menu_title'    => 'Ustawienia motywu',
-        'menu_slug'     => 'ustawienia-motywu',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-}
 function moj_motyw_przyciski_customizer( $wp_customize ) {
     $wp_customize->add_section( 'sekcja_przyciskow', array(
         'title'    => 'Przyciski Strony Głównej',

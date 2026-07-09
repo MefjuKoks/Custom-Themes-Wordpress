@@ -9,15 +9,21 @@
 <body <?php body_class(); ?> >
     <header>
         <a href="<?php echo home_url(); ?>"><h1><?php bloginfo('name'); ?> </h1></a>
-        <h1><?php bloginfo('description'); ?> </h1>
-        <nav>
+        <h3><?php bloginfo('description'); ?> </h3>
+        <nav class="site-nav">
             <?php
             wp_nav_menu( array(
                 'theme_location' => 'glowne-menu',
-                'menu_class'     => 'menu-lista',
-                'fallback_cb'    => 'wp_page_menu',
             ) );
             ?>
         </nav>
-
+        <nav class="second-nav">
+            <?php
+                $args = array(
+                        'child_of' => $post->ID,
+                        'title-li' => ''
+                );
+                wp_list_pages($args);
+            ?>
+        </nav>
     </header>   
