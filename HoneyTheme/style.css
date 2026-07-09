@@ -124,7 +124,7 @@ nav ul li.current_page_item a {
     justify-content: center;
 }
 .custom-logo-link img.custom-logo {
-    width: 300px !important;
+    width: 200px !important;
     height: 150px !important;
     max-width: 100% !important;
     opacity:0.9;
