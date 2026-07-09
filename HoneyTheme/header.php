@@ -36,10 +36,8 @@
                     'child_of' => $post->ID,
                     'title_li' => ''
                 );
+                wp_list_pages($args);
                 ?>
-
-
-                <?php  wp_list_pages($args);  ?>
             </nav>
         </div>
         <div class="search-hd">

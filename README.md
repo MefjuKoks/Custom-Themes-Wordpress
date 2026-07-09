@@ -1,5 +1,5 @@
 # Custom-Themes-Wordpress
-2 Custom Wordpress Themes (Holiday and Basic)
+4 Custom Wordpress Themes (Holiday/Basic/Honey/New)
 # FIRST THEME: HOLIDAY ☀️
 <img src='HolidayTheme/ImageReadme.png'>
 <p>Holiday theme based on holiday and vibe. Good for making traveler or some chill sites </p>
