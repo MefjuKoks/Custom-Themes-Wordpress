@@ -57,3 +57,14 @@ section button {
     cursor: pointer;
     margin: 10px auto; 
 }
+@media screen and (max-width: 768px) {
+    body {
+        
+        min-height: 100vh; 
+        min-height: 100dvh; 
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        background-position: center top !important;
+    }
+}
