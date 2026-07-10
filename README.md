@@ -12,3 +12,7 @@
 <img src='HoneyTheme/ImageReadme.png'>
 <p>Honey theme. Good for making sweet pages with colorful pallete. Amazing for kids-theme pages.  </p>
 
+# FOURTH THEME: NEW 👍
+<img src='assets/ImageReadme.png'>
+<p>New-Basic theme. Amazing for making clean and page-ordered website. Great for people who likes minimalism.</p>
+
