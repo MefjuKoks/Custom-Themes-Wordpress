@@ -16,7 +16,7 @@
             ?>
             <div class="social-links">
                 <?php
-                    echo file_get_contents(get_theme_file_path('assets/x.svg'));
+                    echo file_get_contents(get_theme_file_path('assets/x.svg'));    
                     echo file_get_contents(get_theme_file_path('assets/facebook.svg'));
                     echo file_get_contents(get_theme_file_path('assets/linkerd.svg'));
                     echo file_get_contents(get_theme_file_path('assets/youtube.svg'));
