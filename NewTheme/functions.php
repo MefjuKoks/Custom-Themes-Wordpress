@@ -42,7 +42,8 @@ add_action('wp_enqueue_scripts', 'load_my_js');
 
 register_nav_menus(array(
     'headermenu' => __('Header Menu'),
-    'footermenu' => __('Footer Menu')
+    'footermenu' => __('Footer Menu'),
+    'dodatkowestronymenu' => __('Dodatkowe strony Menu')
 ));
 
 function handle_theme_support(){
@@ -54,7 +55,7 @@ function handle_theme_support(){
 }
 add_action('after_setup_theme', 'handle_theme_support');
 function wporg_filter_title($title, $id = null){
-    if(in_the_loop() && is_main_query()){
+    if(in_the_loop() && is_main_query() && is_home()){
         return '⚽' . $title;
     }
     return $title;
@@ -65,46 +66,87 @@ function modify_footer(){
 }
 add_action('wp_footer', 'modify_footer', 20);
 function theme_specific_login_page(){
-    $logo_url = get_stylesheet_directory_uri() . '/assets/lionel-messi.webp';
+    $logo_url = get_stylesheet_directory_uri() . '/assets/login-user-name-1.png';
     ?>
     <style>
+        html {
+            margin: 0 ;
+            padding: 0 ;
+            height: 100% ;
+        }
+
+        body {  
+            width: 100% ;
+            height: 100dvh ; 
+            margin: 0 ;         
+            padding: 0 ;
+            background-color:#ffffff ;
+            color:#000 ;
+        }   
         body.login #login h1 a {
-            background-image: url('<?php echo $logo_url ?>') !important;
-            width: 100% !important;
-            height: 100px !important;
+            background-image: url('<?php echo $logo_url ?>') ;
+            width: 100% ;
+            height: 100px ;
+        }
+        body.login #login #loginform{
+            box-shadow:1px 1px 50px #9c9998;
         }
         body.login #login #loginform .submit .button-primary{
-            background-color: #d227e6;
-            border-color: #d227e6;
+            background-color: rgb(0, 114, 132);
+            border-color: rgb(0, 114, 132);
             margin:auto;
             width:100%;
             margin-top:20px;
         }
         body.login #login #login-message{
-            border-left-color: #d227e6;
+            border-left-color: rgb(0, 114, 132);
+            background-color: #ffffff ;
         }
         .wp-core-ui .button, .wp-core-ui .button-secondary span{
-            color : #d227e6;
+            color : #303030;
         }
         body.login .language-switcher input{
-            background-color: #d227e6 !important;
-            border-color: #d227e6;
-            color:#ffffff;
+            background-color: rgb(0, 114, 132) ;
+            border-color: rgb(0, 114, 132);
+            color:#fff;
         }
         body.login .language-switcher input:hover{
-            background-color: #d227e6 !important;
-            border-color: #d227e6;
-            color:#ffffff;
+            color:#e8e8e8;
         }
         body.login #login #loginform p input:focus, body.login #login #loginform .user-pass-wrap .wp-pwd #user_pass:focus{
-            outline: none !important;
-            box-shadow: none !important;
-            border: 2px solid #d227e6 !important;
+            outline: none ;
+            box-shadow: none ;
+            border: 1px solid #000 ;
         }
         body.login #login #loginform .forgetmenot{
             width:100%;
+        }
+        .login #nav a, .login #backtoblog a{
+            color:#000 ;
+        }
+        .language-switcher label .dashicons{
+            color:#000 ;
         }
     </style>
     <?php
 }
 add_action('login_enqueue_scripts', 'theme_specific_login_page');
+// function dodaj_tekst_do_footer(){
+//     echo "<p> Dodatkowa czesc footera </p>"; 
+// }
+// add_action('custom_footer_hook', 'dodaj_tekst_do_footer');
+
+// function zmien_moj_tytul($tytul){
+//     return $tytul . ' - dopisek od deva';
+// }
+// add_filter('unikalny_filter_hook' , 'zmien_moj_tytul');
+function add_slug_to_body_class( $classes ) {
+    global $post;
+    if ( is_page() && isset( $post ) ) {
+        $classes[] = 'page-slug-' . $post->post_name;
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'add_slug_to_body_class' );
+
+?>

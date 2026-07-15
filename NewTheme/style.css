@@ -17,9 +17,11 @@ Version: 1.0
 }
 
 body, html {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif ;
 }
-
+body{
+    overflow-x: hidden ;
+}
 body a{
     color:#000;
     text-decoration: none;
@@ -32,7 +34,7 @@ header nav{
 }
 hr{
     color: gray;
-    border:.2px solid gray;
+    border:1px solid gray;
 }
 header nav .menu-footer-menu-container ul{
     display: flex;
@@ -46,7 +48,10 @@ header nav .menu-footer-menu-container ul li a{
     font-size:1.5vw;
     font-weight: 600;
 }
-header nav .menu-footer-menu-container ul li:nth-child(2){
+header nav .menu-footer-menu-container ul li:first-of-type{
+    list-style: none;
+}
+header nav .menu-footer-menu-container ul li{
     list-style:disc;
 }
 header .navbar{
@@ -77,6 +82,26 @@ header .navbar-second{
 }
 header .navbar-second li{
     list-style:none;
+}
+.navbar-third{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float:right;
+    margin-right:30px;
+}
+.navbar-third h2{
+    font-size:1.3vw;
+}
+.navbar-third .menu-dodatkowe-strony-container ul{
+    display: flex;
+    gap:20px;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar-third .menu-dodatkowe-strony-container ul li{
+    font-size:1.3vw;
+    font-weight: bold;
 }
 header nav .social-links{
     margin-right:10px;
@@ -115,6 +140,8 @@ header nav .social-links svg{
     border-radius:20px;
     cursor: pointer;
     transition: background-color .5s;
+
+    margin-top:20px;
 }
 .post button:hover{
     background-color: rgb(0, 99, 114);
@@ -130,4 +157,76 @@ header nav .social-links svg{
 .image-unscaled{
     scale:1.0;
     transition: scale 1s;
+}
+.page-slug-zespol-ludzi .wp-block-columns{
+    width: 100% ;
+    background-color: #9492922d;
+}
+.wp-block-columns{
+    width:100% ;
+}
+.page-slug-zespol-ludzi .wp-block-query ul{
+    display: flex ;
+    flex-direction: row ;
+    align-items: center;
+    gap:100px;
+    overflow:hidden ;
+    animation: animation-imgs 20s infinite alternate linear;
+}
+.page-slug-zespol-ludzi .wp-block-query ul figure{
+    height:300px ;
+    width: 300px ;
+    max-width: 300px ;
+    overflow:hidden ;
+}
+.page-slug-zespol-ludzi .wp-block-query ul figure a img{
+    height: 100% ;
+    width: 100% ;
+}
+.page-slug-zespol-ludzi .wp-block-column h2{
+    font-size:1.7vw ;
+    text-align:center;
+}
+.page-slug-zespol-ludzi .ukryj-numery .wp-block-post .wp-block-columns{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    overflow:hidden ;
+}
+body .is-layout-flex{
+    align-items: center;
+    justify-content:center;
+}
+@keyframes animation-imgs{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(70%);
+    }   
+}
+.archive-title{
+    text-align: center;
+}
+footer .faq-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .faq-container .faq-ul{
+    width: 100%;
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+footer .faq-container .faq-ul li{
+    list-style: none;
+    padding:10px;
+}
+footer .faq-container .faq-ul li:nth-child(even){
+    background-color: rgb(183, 183, 183);
+    display: none;
 }
