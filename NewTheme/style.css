@@ -87,11 +87,31 @@ header .navbar-second li{
     display: flex;
     flex-direction: row;
     align-items: center;
-    float:right;
-    margin-right:30px;
+    justify-content: space-around;
 }
 .navbar-third h2{
     font-size:1.3vw;
+}
+.navbar-third .nav-container, .navbar-third .footer-info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.navbar-third .footer-info-container{
+    flex-direction: column;
+}
+.navbar-third .footer-info-container-part-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+.navbar-third .footer-info-container-part-1 img{
+    max-width: 50px;
+    max-height:50px;
+    margin-right:10px;
 }
 .navbar-third .menu-dodatkowe-strony-container ul{
     display: flex;
