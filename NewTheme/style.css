@@ -270,8 +270,11 @@ body .is-layout-flex{
 #contact-form label{
     margin-bottom:10px;
 }
-#contact-form input:focus,#contact-form textarea:focus{
+#contact-form input:focus{
     scale: 1.04;
+}
+#contact-form textarea:focus{
+    scale:1.02;
 }
 #contact-form button{
     width: 20%;
