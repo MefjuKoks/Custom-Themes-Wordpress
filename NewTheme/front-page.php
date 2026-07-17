@@ -22,6 +22,10 @@ else:
     echo "No content found";
 endif;
 ?>
+<hr>
+<?php
+include 'faq-template.php';
+?>
 <?php
 get_footer();
 ?>

@@ -140,7 +140,6 @@ header nav .social-links svg{
     height:auto;
     text-align: center;
     margin: auto;
-    margin-bottom:5%;
 }
 .post p{
     padding:10px;
@@ -226,27 +225,68 @@ body .is-layout-flex{
         transform: translateX(70%);
     }   
 }
-.archive-title{
+.archive-title, .archive-description{
     text-align: center;
 }
-footer .faq-container{
+.faq-container{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left:3px;
 }
-footer .faq-container .faq-ul{
+.faq-container .faq-ul{
     width: 100%;
     text-align: center;
     padding:0;
     margin:0;
 }
-footer .faq-container .faq-ul li{
+.faq-container .faq-ul li{
     list-style: none;
     padding:10px;
 }
-footer .faq-container .faq-ul li:nth-child(even){
+.faq-container .faq-ul li:nth-child(even){
     background-color: rgb(183, 183, 183);
     display: none;
+}
+#contact-form{
+    margin:auto;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#contact-form input{
+    padding:5px;
+    transition: scale .4s;
+}
+#contact-form textarea{
+    transition: scale .4s;
+}
+#contact-form input, #contact-form textarea{
+    margin-bottom:10px;
+}
+#contact-form label{
+    margin-bottom:10px;
+}
+#contact-form input:focus,#contact-form textarea:focus{
+    scale: 1.04;
+}
+#contact-form button{
+    width: 20%;
+    padding:10px;
+    margin: 10px auto;
+    border-radius:5%;
+    border:none;
+    background-color: #000;
+    color:#fff;
+    cursor:pointer;
+    transition:scale .5s;
+}
+#contact-form button:hover{
+    scale: 1.1;
+}
+#contact-form button:focus{
+    color:#bdbdbd;
 }

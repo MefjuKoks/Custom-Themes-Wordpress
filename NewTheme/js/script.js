@@ -28,7 +28,7 @@ ScaleAndUnscaleImageAfter2Seconds();
 
 //FAQ
 function ShowFaqAndDelete(){
-    let FAQ_questions = document.querySelectorAll('footer .faq-ul li');
+    let FAQ_questions = document.querySelectorAll('.faq-ul li');
     let index = 0;
     FAQ_questions.forEach(FQ => {
         index += 1;
@@ -46,6 +46,13 @@ function ShowFaqAndDelete(){
     });
 }
 ShowFaqAndDelete();
+
+
+
+
+//FORM CONTACT
+
+
 
 
 
