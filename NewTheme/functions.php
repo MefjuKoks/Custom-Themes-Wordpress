@@ -148,5 +148,42 @@ function add_slug_to_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'add_slug_to_body_class' );
+if ( isset( $_POST['submit_my_form'] ) ) {
+
+    // 1. Weryfikacja Nonce
+    if ( ! isset( $_POST['email_form_nonce'] ) || ! wp_verify_nonce( $_POST['email_form_nonce'], 'my_form_action' ) ) {
+        wp_die( 'Błąd bezpieczeństwa. Spróbuj ponownie.' );
+    }
+
+    // 2. Sanityzacja danych wejściowych
+    $Name         = sanitize_text_field( $_POST['Name'] );
+    $sender_email = sanitize_email( $_POST['user_email'] );
+    $message      = sanitize_textarea_field( $_POST['message-content'] ); 
+
+    // 3. Walidacja adresu e-mail (zamiast return, sprawdzamy warunek poprawności)
+    if ( ! is_email( $sender_email ) ) {
+        echo '<p style="color:red;">Podano nieprawidłowy adres e-mail.</p>';
+    } else {
+        
+        // 4. Przygotowanie i wysyłka wiadomości
+        $to      = 'dyduchm567@gmail.com'; 
+        $subject = 'Nowa wiadomość z formularza';
+        
+        $body    = "Od: " . $Name . " <" . $sender_email . ">\n\n";
+        $body   .= "Treść wiadomości:\n" . $message;
+
+        // Dodano poprawny znak końca linii \r\n
+        $headers = array( 'Reply-To: ' . $Name . ' <' . $sender_email . '>' . "\r\n" );
+
+        $success = wp_mail( $to, $subject, $body, $headers );
+
+        // 5. Komunikat dla użytkownika
+        if ( $success ) {
+            echo '<p style="color:green;">Wiadomość została wysłana pomyślnie!</p>';
+        } else {
+            echo '<p style="color:red;">Wystąpił błąd podczas wysyłania wiadomości przez serwer.</p>';
+        }
+    }
+}
 
 ?>
