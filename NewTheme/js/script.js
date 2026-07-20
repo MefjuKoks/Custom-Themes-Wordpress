@@ -46,14 +46,3 @@ function ShowFaqAndDelete(){
     });
 }
 ShowFaqAndDelete();
-
-
-
-
-//FORM CONTACT
-
-
-
-
-
-

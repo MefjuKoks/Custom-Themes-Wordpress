@@ -250,6 +250,10 @@ body .is-layout-flex{
     background-color: rgb(183, 183, 183);
     display: none;
 }
+.faq-container .faq-ul li:nth-child(odd):hover{
+    box-shadow: 10px 10px 100px #000;
+    cursor: pointer;
+}
 #contact-form{
     margin:auto;
     text-align: center;
@@ -260,9 +264,11 @@ body .is-layout-flex{
 #contact-form input{
     padding:5px;
     transition: scale .4s;
+    text-align: center;
 }
 #contact-form textarea{
     transition: scale .4s;
+    resize:none;
 }
 #contact-form input, #contact-form textarea{
     margin-bottom:10px;

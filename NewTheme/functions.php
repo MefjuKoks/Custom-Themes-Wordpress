@@ -166,7 +166,7 @@ if ( isset( $_POST['submit_my_form'] ) ) {
     } else {
         
         // 4. Przygotowanie i wysyłka wiadomości
-        $to      = 'dyduchm567@gmail.com'; 
+        $to      = 'usigma1234alpha@gmail.com'; 
         $subject = 'Nowa wiadomość z formularza';
         
         $body    = "Od: " . $Name . " <" . $sender_email . ">\n\n";
