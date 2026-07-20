@@ -9,11 +9,15 @@ if(have_posts()):
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <p><?php the_content(); ?></p>
 </div>
-
 <?php
 endwhile;
 else:
     echo "No content found.";
 endif;
+?>
+<?php 
+    comments_template();
+?>
+<?php
 get_footer();
 ?>

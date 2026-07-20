@@ -18,6 +18,7 @@ add_action('wp_enqueue_scripts', 'register_styles');
 
 
 function load_my_js(){
+    wp_enqueue_script('wp-api');
     wp_enqueue_script(
         'swiper-js', 
         get_template_directory_uri() . '/js/swiper-bundle.min.js', 
@@ -27,14 +28,14 @@ function load_my_js(){
     );
 
     wp_enqueue_script(
-        'moj-skrypt-galerii',
+        'mine-script',
         get_template_directory_uri() . '/js/script.js',
-        array('swiper-js'), 
+        array('wp-api'), 
         '1.0.0',
         true
     );
 
-    wp_localize_script('moj-skrypt-galerii', 'themeData', array(
+    wp_localize_script('mine-script', 'themeData', array(
         'themeUrl' => get_template_directory_uri()
     ));
 }

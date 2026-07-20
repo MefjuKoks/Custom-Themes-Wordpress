@@ -1,6 +1,7 @@
 <?php
 get_header();
 ?>
+<div class="posts-container">
 <?php 
 
 if(have_posts()):
@@ -22,6 +23,7 @@ else:
     echo "No content found";
 endif;
 ?>
+</div>
 <hr>
 <?php
 include 'faq-template.php';

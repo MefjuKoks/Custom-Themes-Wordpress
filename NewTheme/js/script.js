@@ -46,3 +46,38 @@ function ShowFaqAndDelete(){
     });
 }
 ShowFaqAndDelete();
+
+
+
+//Rest API
+// wp.api.loadPromise.done(function() {
+//     const allPosts = new wp.api.collection.Posts();
+//     allPosts.fetch().done(
+//         function(posts){
+//             posts.forEach(post => {
+//                 console.log(post.title.rendered + "\n");
+//             })
+//         }
+//     );
+// }) WERSJA NIE DZIALAJACA;
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('http://localhost:8000/wp-json/wp/v2/posts')
+        .then(response => {
+            if(!response.ok){
+                console.log("Blad fetcha")
+            }
+            else{
+                return response.json();
+            }
+        })
+        .then(posts => {
+            posts.forEach(post => {
+                console.log(post.title.rendered + "\n");
+            })
+        })
+        .catch(error => {
+            console.log(error);
+        })
+        
+    })
+
