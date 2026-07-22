@@ -45,7 +45,7 @@ header nav .menu-footer-menu-container ul li{
     list-style: none;
 }
 header nav .menu-footer-menu-container ul li a{
-    font-size:1.5vw;
+    font-size:20px;
     font-weight: 600;
 }
 header nav .menu-footer-menu-container ul li:first-of-type{
@@ -58,7 +58,7 @@ header .navbar{
     margin-left:30px;
 }
 header .navbar h1{
-    font-size:3vw;
+    font-size:40px;
 }
 header nav .menu-header-menu-container ul{
     display: flex;
@@ -69,14 +69,13 @@ header nav .menu-header-menu-container ul li{
     list-style: none;
 }
 header nav .menu-header-menu-container ul li a{
-    font-size: 1.5vw;
+    font-size: 20px;
     font-weight:600;
 }
 header nav .menu-header-menu-container{
     margin-right:10px;
 }
 header .navbar-second{
-    transform: translateY(-30px);
     float:right;
     margin-right:10px;
 }
@@ -90,7 +89,8 @@ header .navbar-second li{
     justify-content: space-around;
 }
 .navbar-third h2{
-    font-size:1.3vw;
+    font-size:20px;
+    width: fit-content;
 }
 .navbar-third .nav-container, .navbar-third .footer-info-container{
     display: flex;
@@ -113,6 +113,9 @@ header .navbar-second li{
     max-height:50px;
     margin-right:10px;
 }
+.navbar-third .menu-dodatkowe-strony-container{
+    width: 100%;
+}
 .navbar-third .menu-dodatkowe-strony-container ul{
     display: flex;
     gap:20px;
@@ -120,14 +123,15 @@ header .navbar-second li{
     align-items: center;
 }
 .navbar-third .menu-dodatkowe-strony-container ul li{
-    font-size:1.3vw;
+    font-size:18px;
     font-weight: bold;
+    width: 100%;
 }
 header nav .social-links{
     margin-right:10px;
 }
 header nav .social-links svg{
-    width:1.5vw;
+    width:20px;
     height:auto;
     margin-left:20px;
 }
@@ -148,7 +152,7 @@ header nav .social-links svg{
     list-style: decimal;
 }
 .post h2{
-    font-size:4vw;
+    font-size:40px;
 }
 .post button{
     border:none;
@@ -203,7 +207,7 @@ header nav .social-links svg{
     width: 100% ;
 }
 .page-slug-zespol-ludzi .wp-block-column h2{
-    font-size:1.7vw ;
+    font-size:30px ;
     text-align:center;
 }
 .page-slug-zespol-ludzi .ukryj-numery .wp-block-post .wp-block-columns{
@@ -298,4 +302,19 @@ body .is-layout-flex{
 }
 #contact-form button:focus{
     color:#bdbdbd;
+}
+@media screen and (width <= 768px){
+    footer .navbar-third{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .navbar-third .nav-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
