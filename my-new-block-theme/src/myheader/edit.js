@@ -32,7 +32,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __( 'Myheader – hello from the editor!', 'myheader' ) }
+			{ __( 'Myheader – bigger than ever!', 'myheader' ) }
 		</p>
 	);
 }

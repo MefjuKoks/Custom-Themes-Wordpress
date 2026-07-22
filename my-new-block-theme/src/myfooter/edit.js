@@ -32,7 +32,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
-			<h2>Footer Placeholder Block</h2>
+			<h2>Foot and good mood </h2>
 		</div>
 	);
 }
