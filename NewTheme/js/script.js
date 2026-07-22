@@ -60,6 +60,7 @@ ShowFaqAndDelete();
 //         }
 //     );
 // }) WERSJA NIE DZIALAJACA;
+//WERSJA DZIALAJACAC:\Users\Dell\Documents\moj_projekt_php\wp-content\themes\FourCustomThemes\NewTheme>wp-env start
 document.addEventListener('DOMContentLoaded', () => {
     fetch('http://localhost:8000/wp-json/wp/v2/posts')
         .then(response => {
