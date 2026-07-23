@@ -7,6 +7,9 @@ if(have_posts()):
     <button> DEFAULT </button>
     <p>Pojedynczy wpis</p>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <?php if(has_post_thumbnail()){
+        the_post_thumbnail();
+    }?>
     <p><?php the_content(); ?></p>
 </div>
 <?php
