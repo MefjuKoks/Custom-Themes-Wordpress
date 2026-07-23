@@ -14,6 +14,11 @@
                 );
                 wp_nav_menu($args);
             ?>
+            <?php 
+            if(function_exists('the_custom_logo')){
+                echo the_custom_logo();
+            }
+            ?>
             <div class="social-links">
                 <?php
                     echo file_get_contents(get_theme_file_path('assets/x.svg'));    
@@ -23,11 +28,6 @@
                 ?>
             </div>
         </nav>
-        <?php 
-            if(function_exists('the_custom_logo')){
-                echo the_custom_logo();
-            }
-        ?>
         <hr>
         <nav class="navbar">
         <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
