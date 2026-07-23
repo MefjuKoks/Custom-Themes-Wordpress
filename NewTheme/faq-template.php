@@ -1,7 +1,7 @@
 <?php $TitleFaq = get_field('the_title_faq'); ?>
 <?php if(!empty($TitleFaq)){
     echo "<hr>";
-    echo "<div class='faq-container'>"
+    echo "<div class='faq-container'>";
 }?>
     <h2 class="faq-h2"><?php if(!empty($TitleFaq)){
         echo $TitleFaq;

@@ -19,19 +19,20 @@ if(have_posts()):
     ?>
     <button> DEFAULT </button>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <h3><?php   if(!empty($heroTitle)){
-        echo $heroTitle;
-    } ?></h3>
-    <p><?php if(!empty($heroDescription)){
-        echo $heroDescription;
-    } ?></p>
-    <img src="<?php if(!empty($heroImage)){
-        echo $heroImage;
-    } ?>" alt="men with thumb up">
-    <button><?php if(!empty($heroButtonCta)){
-        echo $heroButtonCta;
+    <?php   if(!empty($heroTitle)){
+    echo "<h3>
+        $heroTitle;
+    </h3>"; } ?>
+    <?php if(!empty($heroDescription)){
+        echo "<p> $heroDescription </p>";;
+    } ?>
+    <?php if (!empty($heroImage)): ?>
+        <img src="<?php echo $heroImage; ?>" alt="men with thumb up">
+    <?php endif; ?>
+    <?php if(!empty($heroButtonCta)){
+        echo "<button> $heroButtonCta </button>";
     } 
-    ?></button>
+    ?>
 </div>
 <?php
 endwhile;

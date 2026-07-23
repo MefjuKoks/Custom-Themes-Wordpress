@@ -18,7 +18,7 @@
                     <?php
                     $AuthorName = get_field('author_footer', 'options');
                     if(!empty($AuthorName)){
-                        echo "<h3>Author Name:</h3>"
+                        echo "<h3>Author Name:</h3>";
                     }
                     ?>
                     <?php 
