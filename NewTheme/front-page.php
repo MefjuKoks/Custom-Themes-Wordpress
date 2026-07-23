@@ -9,12 +9,28 @@ if(have_posts()):
     the_content();
 ?>
 <div class="post">
+    <?php
+
+    $heroTitle = get_field('hero_title');
+    $heroDescription = get_field('hero_description');
+    $heroImage = get_field('hero_image');
+    $heroButtonCta = get_field('hero_button_-_cta');
+
+    ?>
     <button> DEFAULT </button>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <h3><?php   the_field('hero_title') ?></h3>
-    <p><?php the_field('hero_description') ?></p>
-    <img src="<?php the_field('hero_image') ?>" alt="men with thumb up">
-    <button><?php the_field('hero_button_-_cta') 
+    <h3><?php   if($heroTitle){
+        echo $heroTitle;
+    } ?></h3>
+    <p><?php if($heroDescription){
+        echo $heroDescription;
+    } ?></p>
+    <img src="<?php if($heroImage){
+        echo $heroImage;
+    } ?>" alt="men with thumb up">
+    <button><?php if($heroButtonCta){
+        echo $heroButtonCta;
+    } 
     ?></button>
 </div>
 <?php
@@ -24,7 +40,6 @@ else:
 endif;
 ?>
 </div>
-<hr>
 <?php
 include 'faq-template.php';
 ?>

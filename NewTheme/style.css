@@ -32,6 +32,13 @@ header nav{
     align-items: center;
     justify-content: space-between;
 }
+header nav .menu ul{
+    display: flex;
+    flex-direction: row;
+}
+header nav .menu ul li{
+    list-style:none;
+}
 hr{
     color: gray;
     border:1px solid gray;
@@ -98,6 +105,13 @@ header .navbar-second li{
     align-items: center;
     justify-content: center;
     width: 50%;
+}
+.navbar-third .nav-container ul{
+    display:flex;
+    flex-direction: row;
+}
+.navbar-third .nav-container ul li{
+    list-style:none;
 }
 .navbar-third .footer-info-container{
     flex-direction: column;

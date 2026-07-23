@@ -1,5 +1,9 @@
+<?php $TitleFaq = get_field('the_title_faq'); ?>
+<hr>
 <div class="faq-container">
-    <h2 class="faq-h2"><?php the_field('the_title_faq');?></h2>
+    <h2 class="faq-h2"><?php if($TitleFaq){
+        echo $TitleFaq;
+    }?></h2>
     <ul class="faq-ul">
 <?php
 if( have_rows('faq') ):
@@ -8,8 +12,12 @@ if( have_rows('faq') ):
 
         $question = get_sub_field('question');
         $answer = get_sub_field('answer');
-        echo "<li> $question </li>";
-        echo "<li> $answer </li>";
+        if($question){
+            echo "<li> $question </li>";
+        }
+        if($answer){
+            echo "<li> $answer </li>";
+        }
     endwhile;
 
 else :

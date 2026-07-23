@@ -1,0 +1,37 @@
+.simple-contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.simple-contact-form > h2{
+    margin-bottom:15px;
+    font-size: 30px;
+}
+.simple-contact-form > p{
+    font-size: 24px;
+    margin-bottom:15px;
+}
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 10px;
+}
+#contact-form input{
+    padding: 5px;
+}
+#contact-form button{
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #007a2f;
+    margin: auto;
+    border: none;
+    font-size: 22px;
+    transition: scale 0.2s ease;
+}
+#contact-form button:hover{
+    background-color: #00722c;
+    scale: 1.1;
+    cursor: pointer;
+}
