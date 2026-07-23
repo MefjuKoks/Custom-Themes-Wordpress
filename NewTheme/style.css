@@ -36,10 +36,8 @@ header nav{
 header nav .menu{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items:center;
 }
-header nav .menu a img{
+header nav a img{
     height:40px;
     width:auto;
 }
