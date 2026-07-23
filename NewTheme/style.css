@@ -35,9 +35,12 @@ header nav{
 header nav .menu ul{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items:center;
 }
 header nav .menu ul li{
     list-style:none;
+    margin-left:10px;
 }
 hr{
     color: gray;
@@ -109,9 +112,12 @@ header .navbar-second li{
 .navbar-third .nav-container ul{
     display:flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .navbar-third .nav-container ul li{
     list-style:none;
+    margin-left:10px;
 }
 .navbar-third .footer-info-container{
     flex-direction: column;

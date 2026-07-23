@@ -15,9 +15,13 @@
                             echo "<img src='" . wp_kses_post($LogoSrc) . "' alt='logo'";
                         }
                     ?>
-                    <h3>Author Name:</h3>
+                    <?php
+                    $AuthorName = get_field('author_footer', 'options');
+                    if(!empty($AuthorName)){
+                        echo "<h3>Author Name:</h3>"
+                    }
+                    ?>
                     <?php 
-                        $AuthorName = get_field('author_footer', 'options');
                         if(!empty($AuthorName)){
                             echo wp_kses_post($AuthorName);
                         }
